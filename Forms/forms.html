@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms and how to use them</title>
+    <link rel="stylesheet" href="styleForms.css">
+</head>
+<body>
+    <header>
+        <h1>Contact us!!</h1>
+    </header>
+    <main>
+        <section>
+            <form action="">
+                <fieldset>  <!--It is used to make groups-->
+                    <legend>Basic data</legend>
+                    Name: <input type="text" placeholder="Jonh Doe" required>
+                    <br>
+                    Last name: <input type="text" placeholder="Unknown" required>
+                    <br>
+                    e-mail: <input type="email" placeholder="JonhDoeUnknown@domain.com" required>
+                    <br>
+                    Phone Number: <input type="number" placeholder="+23 2353927503" required>
+                    <br>
+                </fieldset>
+                <fieldset>
+                    <legend>Order Details</legend>
+                    <span>You can only order maximum 20 packages, Thanks for your comprehension</span>
+                    <br>
+                    Items amount <input type="number" min="1" max="20" placeholder="maximun 20" required>
+                    <br>
+                    Delivery date <input type="date" min="" max=""required>
+                </fieldset>
+                <fieldset>
+                    <legend>Delivery Details</legend>
+                    <!--The value of label attribute must be the same than the value of the ID attribute correspondingly-->
+                    <label for="delibery">
+                        <input id="delibery" type="radio" name="DeliberyData"> Delivery
+                    </label>   
+                    <label for="HeadquartersPickup">           
+                        <input id="HeadquartersPickup" type="radio" name="DeliberyData"> Headquarters pickup
+                    </label>
+                    <input id="Preferred" type="radio" name="DeliberyData"> 
+                    <label for="Preferred">Preferred delibery</label>
+                    <br>
+                    <select name="Subsidiary">
+                        <option value="">Tepoztlan</option>
+                        <option value="">Cuernavaca</option>
+                        <option value="">Cuautla</option>
+                        <option value="">Tres Marias</option>
+                        <option value="">Zacatepec</option>
+                        <option value="">Jardines de México</option>
+                        <option value="">El rollo</option>
+                    </select>
+                    <br>
+                    <!--The same value for list attribute and id from datalist-->
+                    <input list="Branch">
+                    <datalist id="Branch">
+                        <option value="Morelos"></option>
+                        <option value="CDMX"></option>
+                        <option value="Puebla"></option>
+                        <option value="Veracruz"></option>
+                    </datalist>
+                    <br>
+                    <input type="checkbox" required> Terms & Conditios apply 
+                    <br>
+                    <input type="submit">
+                </fieldset>
+                <button type="submit">
+                    Whenever you are ready sent it!!
+                </button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
